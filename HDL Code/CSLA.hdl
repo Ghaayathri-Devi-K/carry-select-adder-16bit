@@ -1,0 +1,12 @@
+CHIP CSLA {
+    IN a[16], b[16];
+    OUT out[16],cout;
+
+    PARTS:
+    RippleCarryAdder4Bit(a=a[0..3],b=b[0..3],out=out[0..3],cout=c1);
+    block(a=a[4..7],b=b[4..7],c=c1,out=out[4..7],cout=c2);
+    block(a=a[8..11],b=b[8..11],c=c2,out=out[8..11],cout=c3);
+    block(a=a[12..15],b=b[12..15],c=c3,out=out[12..15],cout=cout);
+
+}
+

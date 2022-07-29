@@ -1,0 +1,23 @@
+CHIP block {
+    IN a[4], b[4],c;
+    OUT out[4],cout;
+
+    PARTS:
+    FAnand(a=a[0],b=b[0],c=false,sum=out11,carry=carry11);
+    FAnand(a=a[1],b=b[1],c=carry11,sum=out12,carry=carry12);
+    FAnand(a=a[2],b=b[2],c=carry12,sum=out13,carry=carry13);
+    FAnand(a=a[3],b=b[3],c=carry13,sum=out14,carry=cout1);
+
+    FAnand(a=a[0],b=b[0],c=true,sum=out21,carry=carry21);
+    FAnand(a=a[1],b=b[1],c=carry21,sum=out22,carry=carry22);
+    FAnand(a=a[2],b=b[2],c=carry22,sum=out23,carry=carry23);
+    FAnand(a=a[3],b=b[3],c=carry23,sum=out24,carry=cout2);
+ 
+    Mux(a=out11,b=out21,sel=c,out=out[0]);
+    Mux(a=out12,b=out22,sel=c,out=out[1]);
+    Mux(a=out13,b=out23,sel=c,out=out[2]);
+    Mux(a=out14,b=out24,sel=c,out=out[3]);
+    
+    Mux(a=cout1,b=cout2,sel=c,out=cout);    
+
+}
