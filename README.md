@@ -13,4 +13,4 @@ Download this software from nand2tetris.
 https://drive.google.com/open?id=1xZzcMIUETv3u3sdpM_oTJSTetpVee3KZ
 <br>
 The folder downloaded has 2 sub-folders namely tools and projects. In the tools sub-sub folder use the Hardware Simulator to simulate the following codes.
-Import the CLSA.hdl file in the hardware simulator and simulate the working of the Carry Select Adder.
+Import the CSLA.hdl file in the hardware simulator and simulate the working of the Carry Select Adder.
