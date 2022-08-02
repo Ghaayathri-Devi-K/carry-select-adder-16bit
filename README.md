@@ -1,4 +1,4 @@
-# CARRY SELECT ADDER
+# 16-bit CARRY SELECT ADDER 
 
 Adders are basic building blocks of any processor or data path application. For the design of high-performance processing units high speed adders with low power consumption is a requirement. Carry Select Adder (CSA) is known to be one of the fastest adders used in many data processing applications. In this project, we present a new CSLA architecture using NAND gates alone. It employs multiplexers and full-adders for calculation of sum and carry of two 16-bit numbers.
 
